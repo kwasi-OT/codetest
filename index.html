@@ -57,7 +57,7 @@
       gap: 1.5rem;
     }
 
-    span {
+    .iconContainer span {
       width: 2.5rem;
       height: 2.5rem;
       border-radius: 50%;
@@ -139,8 +139,49 @@
       color: var(--orange);
     }
 
-    .thankYou {
+    .rating {
       display: none;
+    }
+
+    .imgContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .result {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+
+    .result span {
+      width: fit-content;
+      height: fit-content;
+      border-radius: 2rem;
+      background-color: hsl(212, 16%, 21%);
+      padding: 0.6rem;
+      color: var(--orange);
+    }
+
+    .thankyouContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .thankyouContainer h2 {
+      color: var(--White);
+    }
+
+    .thankyouContainer p {
+      color: var(--Light-Grey);
     }
 
     @media (min-width: 768px) {
@@ -225,7 +266,6 @@
               don't hesitate to get in touch!
             </p>
           </div>
-          <button>SUBMIT</button>
         </div>
       </div>
     </div>
