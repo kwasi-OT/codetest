@@ -17,9 +17,9 @@
 
   <body>
 <!-- Rating state start -->
-    <div class="rating">
+    <div id="rating">
       <div class="mainCard">
-        <div class="selectCard">
+        <div class="selectCard" id="ratingCard">
           <div class="iconContainer">
             <span>
               <img src="/assets/images/icon-star.svg" alt="star icon">
@@ -32,14 +32,14 @@
               to help us improve our offering!
             </p>
           </div>
-          <div class="numContainer">
+          <div class="numContainer" id="ratingButtons">
             <input type="button" value="1">
             <input type="button" value="2">
             <input type="button" value="3">
             <input type="button" value="4">
             <input type="button" value="5">
           </div>
-          <button>SUBMIT</button>
+          <button id="submitButton">SUBMIT</button>
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@
 
     <!-- Thank you state start -->
 
-    <div class="thankYou">
+    <div id="thankYou">
       <div class="mainCard">
         <div class="selectCard">
           <div class="imgContainer">
@@ -57,7 +57,7 @@
           <div class="result">
             <span>
               <p>
-                You selected <span class="rating"></span> here out of 5
+                You selected <span class="rating"></span> out of 5
               </p>
             </span>
           </div>

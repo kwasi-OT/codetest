@@ -121,7 +121,7 @@ body {
     color: var(--orange);
   }
 
-  .thankYou {
+  #thankYou {
     display: none;
   }
 
