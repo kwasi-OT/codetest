@@ -91,12 +91,29 @@
       cursor: pointer;
     }
 
-    .numContainer span:hover {
+    input {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background-color: hsl(212, 16%, 21%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .numContainer input[type="button"] {
+      border: none;
+      background-color: hsl(212, 16%, 21%);
+      color: var(--Medium-Grey);
+    }
+
+    .numContainer input[type="button"]:hover {
       background-color: var(--orange);
       color: var(--White);
     }
 
-    .numContainer span:focus {
+    .numContainer input[type="button"]:focus {
       background-color: var(--Medium-Grey);
       color: var(--White);
     }
@@ -121,12 +138,43 @@
       background-color: var(--White);
       color: var(--orange);
     }
+
+    .thankYou {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .mainCard {
+        width: 90%;
+        height: 80dvh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--Very-Dark-Blue);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .selectCard {
+        width: 30%;
+        height: fit-content;
+        background-color: var(--Dark-Blue);
+        padding: 1.7rem;
+        border-radius: 0.7rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+    }
   </style>
 </head>
 
   <body>
 <!-- Rating state start -->
-    <div>
+    <div class="rating">
       <div class="mainCard">
         <div class="selectCard">
           <div class="iconContainer">
@@ -142,11 +190,11 @@
             </p>
           </div>
           <div class="numContainer">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-            <span>5</span>
+            <input type="button" value="1">
+            <input type="button" value="2">
+            <input type="button" value="3">
+            <input type="button" value="4">
+            <input type="button" value="5">
           </div>
           <button>SUBMIT</button>
         </div>
@@ -157,13 +205,30 @@
 
     <!-- Thank you state start -->
 
-    <!-- You selected Add rating here out of 5 -->
-
-    <!-- Thank you!
-
-    We appreciate you taking the time to give a rating. If you ever need more support,
-    don't hesitate to get in touch! -->
-
+    <div class="thankYou">
+      <div class="mainCard">
+        <div class="selectCard">
+          <div class="imgContainer">
+            <img src="/assets/images/illustration-thank-you.svg" alt="thank you illustration">
+          </div>
+          <div class="result">
+            <span>
+              <p>
+                You selected <span class="rating"></span> here out of 5
+              </p>
+            </span>
+          </div>
+          <div class="thankyouContainer">
+            <h2>Thank you!</h2>
+            <p>
+              We appreciate you taking the time to give a rating. If you ever need more support,
+              don't hesitate to get in touch!
+            </p>
+          </div>
+          <button>SUBMIT</button>
+        </div>
+      </div>
+    </div>
     <!-- Thank you state end -->
 
 
